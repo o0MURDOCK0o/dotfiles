@@ -1,0 +1,14 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+LICENSE = ""
+"README.md" = ""
+
+[default.variables]
+
+[shell.files]
+"shell/shrc" = "~/.config/shrc"
+"shell/zshrc" = "~/.zshrc"
