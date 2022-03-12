@@ -77,7 +77,7 @@ ssh-add -l 2>/dev/null >/dev/null
 [ $? -ge 2 ] && rm -f "$SSH_AUTH_SOCK" && ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
 
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-export CARGO_HOME="~/.cargo"
+export CARGO_HOME="$HOME/.cargo"
 
 # Path variable
 export PATH="$PATH:$CARGO_HOME/bin"
