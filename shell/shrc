@@ -6,8 +6,15 @@ function alias_help {
 }
 
 
+############### Environment Variables ###############
+
+export FUZZY_FINDER=sk
+
+
 ############### Aliases ###############
 
+
+alias cl="ros exec cl-repl" # Common lisp REPL
 alias ahelp="alias_help" # List all available aliases
 alias pacman='sudo pacman'
 
