@@ -14,9 +14,9 @@ export FUZZY_FINDER=sk
 ############### Aliases ###############
 
 
-alias cl="ros exec cl-repl" # Common lisp REPL
-alias ahelp="alias_help" # List all available aliases
-alias pacman='sudo pacman'
+alias cl='ros exec cl-repl' # Common lisp REPL
+alias ahelp='alias_help' # List all available aliases
+alias pacman="sudo pacman"
 
 # Git
 alias g='git' # Git
@@ -43,7 +43,7 @@ alias gsc='git_search_commits' # Search git commits
 alias ..='cd ..'
 
 # Alias for copying output of a command to clipboard
-alias cpy='xclip -selection clipboard' # Copy piped command output to clipboard
+alias cpy="xclip -selection clipboard" # Copy piped command output to clipboard
 
 
 # Exa (ls replacement)
