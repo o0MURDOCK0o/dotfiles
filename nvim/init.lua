@@ -114,7 +114,7 @@ return require('packer').startup(function()
                 },
                 indent = {
                     enable = true
-                }
+                },
                 rainbow = {
                     enable = true,
                     colors = {
