@@ -115,6 +115,17 @@ return require('packer').startup(function()
                 indent = {
                     enable = true
                 }
+                rainbow = {
+                    enable = true,
+                    colors = {
+                        "#bd93f9",
+                        "#50fa7b",
+                        "#ffb86c",
+                        "#ff79c6",
+                        "#8be9fd",
+                        "#f1fa8c",
+                    },
+                },
             }
         end,
     }
