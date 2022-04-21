@@ -12,3 +12,6 @@ LICENSE = ""
 [shell.files]
 "shell/shrc" = "~/.config/shrc"
 "shell/zshrc" = "~/.zshrc"
+
+[nvim.files]
+"nvim/init.lua" = "~/.config/nvim/init.lua"
