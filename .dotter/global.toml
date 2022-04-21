@@ -15,6 +15,7 @@ LICENSE = ""
 
 [nvim.files]
 "nvim/init.lua" = "~/.config/nvim/init.lua"
+"nvim/ftplugin/lisp.vim" = "~/.config/nvim/ftplugin/lisp.vim"
 
 [alacritty.files]
 "alacritty/alacritty.yml" = "~/.config/alacritty/alacritty.yml"
