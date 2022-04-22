@@ -9,7 +9,7 @@ function alias_help {
 ############### Environment Variables ###############
 
 export FUZZY_FINDER=sk
-
+export EDITOR=nvim
 
 ############### Aliases ###############
 
