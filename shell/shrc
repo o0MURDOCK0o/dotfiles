@@ -17,6 +17,8 @@ alias v='nvim' # nvim
 alias cl='ros exec cl-repl' # Common lisp REPL
 alias ahelp='alias_help' # List all available aliases
 alias pacman='sudo pacman'
+alias t='task' # taskwarrior
+alias ts='timew summary' # timewarrior
 
 # Git
 alias g='git' # Git
