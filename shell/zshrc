@@ -26,6 +26,8 @@ unsetopt beep extendedglob nomatch notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
+# Keychain
+eval $(keychain --eval --quiet id_rsa)
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
