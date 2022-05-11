@@ -1,5 +1,5 @@
 includes = []
-packages = ["default", "shell", "nvim", "alacritty"]
+packages = ["default", "shell", "nvim", "alacritty", "awesome"]
 
 [files]
 

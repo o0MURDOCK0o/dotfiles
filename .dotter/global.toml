@@ -21,4 +21,4 @@ LICENSE = ""
 "alacritty/alacritty.yml" = "~/.config/alacritty/alacritty.yml"
 
 [awesome.files]
-"awesome/rc.lua" = "~/.config/awesome/rc.lua"
+"awesome/rc.lua" = { target = "~/.config/awesome/rc.lua", type = "symbolic"}
