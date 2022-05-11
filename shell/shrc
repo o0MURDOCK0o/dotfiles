@@ -81,9 +81,9 @@ alias htop='btm'
 alias cat='bat --paging=never --theme=Dracula --style="numbers,changes" --italic-text=always'
 alias ct='bat --paging=never --theme=Dracula --style="plain" --italic-text=always'
 
-export SSH_AUTH_SOCK=~/.ssh/ssh-agent.sock
-ssh-add -l 2>/dev/null >/dev/null
-[ $? -ge 2 ] && rm -f "$SSH_AUTH_SOCK" && ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
+# export SSH_AUTH_SOCK=~/.ssh/ssh-agent.sock
+# ssh-add -l 2>/dev/null >/dev/null
+# [ $? -ge 2 ] && rm -f "$SSH_AUTH_SOCK" && ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
 
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$HOME/.cargo"
