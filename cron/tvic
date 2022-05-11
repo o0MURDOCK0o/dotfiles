@@ -1,0 +1,4 @@
+25 * * * * /bin/bash /home/tvic/dotfiles/scripts/auto_commit.sh "/home/tvic/.task" true
+42 17 * * * /bin/bash /home/tvic/dotfiles/scripts/auto_commit.sh "/home/tvic/.task" false
+26 * * * * /bin/bash /home/tvic/dotfiles/scripts/auto_commit.sh "/home/tvic/.timewarrior/data" true
+43 17 * * * /bin/bash /home/tvic/dotfiles/scripts/auto_commit.sh "/home/tvic/.timewarrior/data" false

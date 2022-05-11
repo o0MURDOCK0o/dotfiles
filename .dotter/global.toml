@@ -22,3 +22,6 @@ LICENSE = ""
 
 [awesome.files]
 "awesome/rc.lua" = { target = "~/.config/awesome/rc.lua", type = "symbolic"}
+
+[cron.files]
+"cron/tvic" = { target = "/var/spool/cron/tvic", type = "symbolic" }
