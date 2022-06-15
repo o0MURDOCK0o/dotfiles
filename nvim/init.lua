@@ -84,17 +84,17 @@ return require('packer').startup(function()
         'p00f/nvim-ts-rainbow',
     }
     -- Slime for vim
-    use {
+    -- use {
         -- 'vlime/vlime',
         --[[ config = function()
         vim.api.nvim_exec("autocmd TextChangedI lisp call feedkeys(\"\\<c-x>\\<c-o>\")", false)
         end, ]]
-    }
+    -- }
     -- Iron.nvim
     use {
-        'hkupty/iron.nvim'
+        'hkupty/iron.nvim',
         config = function()
-        local iron = require("iron.core")
+            local iron = require("iron.core")
 
             iron.setup {
                 config = {
@@ -134,6 +134,7 @@ return require('packer').startup(function()
                     italic = true
                 }
             }
+        end
     }
     -- Show indent guides
     use {
