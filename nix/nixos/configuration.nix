@@ -111,7 +111,7 @@
   hardware.pulseaudio.enable = true;
 
   environment.systemPackages = with pkgs; [
-    neovim 
+    neovim
     wget
     git
   ];
@@ -122,7 +122,7 @@
   };
 
   networking.firewall.enable = false;
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.05";
