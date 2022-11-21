@@ -118,6 +118,9 @@
     neovim
     wget
     git
+    hpe-ltfs
+    xplr
+    croc
   ];
 
   programs.gnupg.agent = {
