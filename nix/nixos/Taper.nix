@@ -66,12 +66,13 @@
   boot.supportedFilesystems = ["btrfs"];
   hardware.enableRedistributableFirmware = true;
   boot.loader = {
-  efi.canTouchEfiVariables = true;
+  #efi.canTouchEfiVariables = true;
     grub = {
       enable = true;
       copyKernels = true;
       version = 2;
       efiSupport = true;
+      efiInstallAsRemovable = true;
       device = "nodev";
     };
   };
