@@ -48,12 +48,18 @@
       homeManagerModules = import ./modules/home-manager;
 
       nixosConfigurations = {
-        # FIXME replace with your hostname
+        Taper = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            # > Our main nixos configuration file <
+            ./nixos/Taper.nix
+          ];
+        };
         nixos = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [
             # > Our main nixos configuration file <
-            ./nixos/configuration.nix
+            ./nixos/T60.nix
           ];
         };
       };
