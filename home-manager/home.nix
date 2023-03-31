@@ -4,6 +4,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   # You can import other home-manager modules here
   imports = [
+    outputs.homeManagerModules.helix
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
 
@@ -35,7 +36,7 @@
     # Configure your nixpkgs instance
     config = {
       # Disable if you don't want unfree packages
-      allowUnfree = true;
+      allowUnfree = false;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = (_: true);
     };
@@ -43,8 +44,8 @@
 
   # TODO: Set your username
   home = {
-    username = "your-username";
-    homeDirectory = "/home/your-username";
+    username = "niemand";
+    homeDirectory = "/home/niemand";
   };
 
   # Add stuff for your user as you see fit:
@@ -53,7 +54,11 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    userEmail = "dance_mit_de_gaense@gmx.de";
+    userName = "o0MURDOCK0o";
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
