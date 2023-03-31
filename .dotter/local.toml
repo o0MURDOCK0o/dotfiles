@@ -1,6 +1,0 @@
-includes = []
-packages = ["default", "shell", "nvim", "alacritty", "awesome"]
-
-[files]
-
-[variables]
