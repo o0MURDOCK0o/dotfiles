@@ -61,12 +61,25 @@
   };
 
   # FIXME: Add the rest of your current configuration
+  time.hardwareClockInLocalTime = true;
 
   # TODO: Set your hostname
   networking.hostName = "nichts";
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
-  boot.loader.systemd-boot.enable = true;
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot"
+    };
+    grub = {
+    efiSupport = true;
+    enable = true;
+    version = 2;
+    device = "nodev";
+    useOSProber = true;
+    };
+  };
 
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
