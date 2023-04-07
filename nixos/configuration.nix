@@ -70,7 +70,7 @@
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot"
+      efiSysMountPoint = "/boot";
     };
     grub = {
     efiSupport = true;
@@ -107,7 +107,24 @@
     # Use keys only. Remove if you want to SSH using password (not recommended)
     passwordAuthentication = false;
   };
-
+  
+  services.xserver = {
+    enable = true;
+    
+    displayManager = {
+      sddm.enable = true;
+      defaultSession = "none+awesome";
+    };
+    
+    windowManager.awesome = {
+      enable = true;
+      luaModules = with pkgs.luaPackages; [
+        luarocks
+      ];
+    };
+  };
+  
+  environment.systemPackages = with pkgs;  [ element-desktop firefox ];
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.11";
 }

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 mount -t btrfs /dev/mapper/enc /mnt
 
 # We first create the subvolumes outlined above:

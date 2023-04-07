@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 mount -o subvol=root,compress=zstd,noatime /dev/mapper/enc /mnt
 
 mkdir /mnt/home
