@@ -15,4 +15,4 @@ mount -o subvol=log,compress=zstd,noatime /dev/mapper/enc /mnt/var/log
 
 # don't forget this!
 mkdir /mnt/boot
-mount DISKSABLE/mnt/boot
+mount $1/mnt/boot #takes the disklable as input e.g. : sda1
