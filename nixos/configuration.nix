@@ -107,21 +107,24 @@
     # Use keys only. Remove if you want to SSH using password (not recommended)
     passwordAuthentication = false;
   };
+
+  time.timeZone = "Europe/Berlin";
   
   services.xserver = {
-    enable = true;
+    # Temporarily removed awesome to try new things
+    # enable = true;
     
-    displayManager = {
-      sddm.enable = true;
-      defaultSession = "none+awesome";
-    };
+    # displayManager = {
+    #   sddm.enable = true;
+    #   defaultSession = "none+awesome";
+    # };
     
-    windowManager.awesome = {
-      enable = true;
-      luaModules = with pkgs.luaPackages; [
-        luarocks
-      ];
-    };
+    # windowManager.awesome = {
+    #   enable = true;
+    #   luaModules = with pkgs.luaPackages; [
+    #     luarocks
+    #   ];
+    # };
   };
   
   environment.systemPackages = with pkgs;  [ element-desktop firefox ];
