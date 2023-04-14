@@ -15,7 +15,7 @@
       difftastic # Better diff which understands syntax
       # direnv # Automatically load env variables when entering directory
       # dotter # Dotfile management
-      dtrx # Do The Right Extraction
+      # dtrx # Do The Right Extraction
       du-dust # More intuitive du
       duf # Display disk usage stats in a readable way
       # exa # Better ls

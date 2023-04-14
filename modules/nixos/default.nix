@@ -4,5 +4,6 @@
 {
   # List your module files here
   # my-module = import ./my-module.nix;
+  security = import ./security.nix;
   shell = import ./shell.nix;
 }
