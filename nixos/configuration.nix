@@ -6,6 +6,7 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
     outputs.nixosModules.shell
+    outputs.nixosModules.audio
     outputs.nixosModules.security
 
     # Or modules from other flakes (such as nixos-hardware):
@@ -99,12 +100,6 @@
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
       extraGroups = [ "wheel" ];
     };
-  };
-
-  nixpkgs.config.pulseaudio = true;
-  hardware.pulseaudio = {
-    enable = true;
-    support32Bit = true;
   };
 
   time.timeZone = "Europe/Berlin";
