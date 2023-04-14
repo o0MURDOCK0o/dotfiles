@@ -16,12 +16,14 @@
     # TODO: Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
 
+    flake-utils.url = "github:numtide/flake-utils";
+
     # Shameless plug: looking for a way to nixify your themes and make
     # everything match nicely? Try nix-colors!
     # nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, flake-utils, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
@@ -45,6 +47,20 @@
         let pkgs = nixpkgs.legacyPackages.${system};
         in import ./shell.nix { inherit pkgs; }
       );
+
+      apps = forAllSystems (system: let
+        pkgs = nixpkgs.legacyPackages.${system};
+      in {
+        format = flake-utils.lib.mkApp {
+          drv = pkgs.writeShellApplication {
+            name = "format";
+            runtimeInputs = [pkgs.alejandra];
+            text = ''
+              alejandra --check .
+            '';
+          };
+        };
+      });
 
       # Your custom packages and modifications, exported as overlays
       overlays = import ./overlays { inherit inputs; };
