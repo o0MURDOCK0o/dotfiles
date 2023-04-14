@@ -6,6 +6,7 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
     outputs.nixosModules.shell
+    outputs.nixosModules.desktop
     outputs.nixosModules.audio
     outputs.nixosModules.security
 
@@ -104,30 +105,6 @@
 
   time.timeZone = "Europe/Berlin";
   
-  services.xserver = {
-	enable = true;
-    desktopManager = {
-      xterm.enable = false;
-      xfce.enable = true;
-    };
-    displayManager.defaultSession = "xfce";
-    # Temporarily removed awesome to try new things
-    # enable = true;
-    
-    # displayManager = {
-    #   sddm.enable = true;
-    #   defaultSession = "none+awesome";
-    # };
-    
-    # windowManager.awesome = {
-    #   enable = true;
-    #   luaModules = with pkgs.luaPackages; [
-    #     luarocks
-    #   ];
-    # };
-  };
-  
-  environment.systemPackages = with pkgs;  [ element-desktop firefox ];
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.11";
 }
