@@ -15,6 +15,7 @@
       difftastic # Better diff which understands syntax
       # direnv # Automatically load env variables when entering directory
       # dotter # Dotfile management
+      dtrx # Do The Right Extraction
       du-dust # More intuitive du
       duf # Display disk usage stats in a readable way
       # exa # Better ls
@@ -51,6 +52,7 @@
       # xplr # TUI file explorer
       # zellij # Sort of a little bit like tmux
       zoxide # More modern version of z (remember directories, cd into them without specifying full path)
+      zstd # Compression
     ];
   };
 }
