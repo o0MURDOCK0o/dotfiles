@@ -1,9 +1,12 @@
-{ pkgs, lib, ... }:
 {
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
   ];
 
-  options = { };
+  options = {};
 
   config = {
     programs.helix = {
