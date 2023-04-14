@@ -132,7 +132,7 @@
     #   luaModules = with pkgs.luaPackages; [
     #     luarocks
     #   ];
-    };
+    # };
   };
   
   environment.systemPackages = with pkgs;  [ element-desktop firefox ];
