@@ -5,7 +5,10 @@
   options = {};
 
   config = {
+    users.defaultUserShell = pkgs.zsh;
+    programs.zsh.enable = true;
     environment.systemPackages = with pkgs; [
+      alejandra # Formatter for nix
       aria # Basically a better wget
       atuin # Save & search shell history
       bat # Better cat (syntax highlighting, etc.)
@@ -18,7 +21,7 @@
       du-dust # More intuitive du
       duf # Display disk usage stats in a readable way
       # exa # Better ls
-      # fd # Better find
+      fd # Better find
       # figlet # Almost as important as toilet
       file # Get information about what kind of file you're looking at
       git # I mean it's git
@@ -50,7 +53,7 @@
       wget # You know this one
       xfce.xfburn # Disc burner for Xfce
       # xplr # TUI file explorer
-      # zellij # Sort of a little bit like tmux
+      zellij # Sort of a little bit like tmux
       zoxide # More modern version of z (remember directories, cd into them without specifying full path)
       zstd # Compression
     ];
