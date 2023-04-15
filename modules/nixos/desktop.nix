@@ -11,6 +11,10 @@
       desktopManager = {
         xterm.enable = false;
         xfce.enable = true;
+        retroarch = {
+          enable = true;
+          package = pkgs.retroarchFull;
+        };
       };
       displayManager.defaultSession = "xfce";
       # Temporarily removed awesome to try new things
